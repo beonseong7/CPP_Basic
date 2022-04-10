@@ -1,0 +1,4 @@
+﻿  structur.cpp
+D:\bsroom\CPPpoject\CPP_structur\CPP_structur\structur.cpp(15,2): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+D:\bsroom\CPPpoject\CPP_structur\CPP_structur\structur.cpp(21,2): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+  CPP_structur.vcxproj -> D:\bsroom\CPPpoject\CPP_structur\Debug\CPP_structur.exe
