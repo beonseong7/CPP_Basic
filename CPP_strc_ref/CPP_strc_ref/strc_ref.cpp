@@ -34,7 +34,6 @@ int main()
 	std::cout << "대입 이후 dup 출력:\n";
 	display(dup);
 	set_pc(four);
-
 	accumulate(dup, five) = four;//함수의값이 구조체 four과 일치된다.
 	std::cout << "문제 소지가 있는 대입 이후 dup 출력:\n";
 	display(dup);

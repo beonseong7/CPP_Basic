@@ -1,2 +1,3 @@
 ﻿  strc_ref.cpp
+D:\bsroom\CPPpoject\CPP_strc_ref\CPP_strc_ref\strc_ref.cpp(63): warning C4172: 지역 변수 또는 임시: tmp의 주소를 반환하고 있습니다.
   CPP_strc_ref.vcxproj -> D:\bsroom\CPPpoject\CPP_strc_ref\Debug\CPP_strc_ref.exe

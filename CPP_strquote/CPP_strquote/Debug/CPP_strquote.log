@@ -1,0 +1,3 @@
+﻿  strquote.cpp
+D:\bsroom\CPPpoject\CPP_strquote\CPP_strquote\strquote.cpp(26,32): error C2664: 'const std::string &version3(std::string &,const std::string &)': 인수 1을(를) 'const char [4]'에서 'std::string &'(으)로 변환할 수 없습니다.
+D:\bsroom\CPPpoject\CPP_strquote\CPP_strquote\strquote.cpp(6,15): message : 'version3' 선언을 참조하십시오.
