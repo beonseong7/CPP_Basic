@@ -1,0 +1,12 @@
+﻿  choices.cpp
+D:\bsroom\CPPpoject\CPP_choices2\CPP_choices2\choices.cpp(25,25): warning C4244: '인수': 'double'에서 'T'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              T=int
+          ]
+D:\bsroom\CPPpoject\CPP_choices2\CPP_choices2\choices.cpp(25,22): warning C4244: '인수': 'double'에서 'T'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              T=int
+          ]
+  CPP_choices2.vcxproj -> D:\bsroom\CPPpoject\CPP_choices2\Debug\CPP_choices2.exe
