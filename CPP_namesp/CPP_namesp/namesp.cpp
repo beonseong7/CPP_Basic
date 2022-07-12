@@ -17,3 +17,24 @@ namespace pers
 		std::cout << rp.lname << ", " << rp.fname;
 	}
 }
+namespace debts
+{
+	void getDebt(Debt& rd)
+	{
+		getPerson(rd.name);
+		std::cout << "부채를 입력하십시오: ";
+		std::cin >> rd.amount;
+	}
+	void showDebt(const Debt& rd)
+	{
+		pers::showPerson(rd.name);
+		std::cout << ": $" << rd.amount << std::endl;
+	}
+	double sumDebts(const Debt ar[], int n)
+	{
+		double total = 0;
+		for (int i = 0; i < n; i++)
+			total += ar[i].amount;
+		return total;
+	}
+}
