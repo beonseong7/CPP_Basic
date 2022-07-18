@@ -59,3 +59,29 @@ void Stock::sell(long num, double price)
 		set_tot();
 	}
 }
+void Stock::update(double price)
+{
+	share_val = price;
+	set_tot();
+}
+void Stock::show() const
+{
+	using std::cout;
+	using std::ios_base;
+	ios_base::fmtflags orig = cout.setf(ios_base::fixed, ios_base::floatfield);
+	std::streamsize prec = cout.precision(3);
+	cout << "company name: " << company
+		<< "주식 수:  " << shares << '\n';
+	cout << "주가 : $" << share_val;
+	cout.precision(2);
+	cout << "주식 총 가치: $" << total_val << '\n';
+	cout.setf(orig, ios_base::floatfield);
+	cout.precision(prec);
+}
+const Stock& Stock::topval(const Stock& s) const //가지고 있는 주식과 전달 받은 주식 가치를 비교
+{
+	if (s.total_val > total_val)
+		return s;
+	else
+		return *this;
+}
