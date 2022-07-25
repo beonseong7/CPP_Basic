@@ -18,7 +18,7 @@ int main()
 	coding.Show();
 	cout << endl;
 
-	total = coding + fixing;
+	total = coding + fixing;// => coding.operator+(fixing) 와 일치한다
 	cout << "coding +fixing = ";
 	total.Show();
 	cout << endl;
