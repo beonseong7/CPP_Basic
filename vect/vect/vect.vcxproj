@@ -142,6 +142,7 @@
     <ClInclude Include="vect.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="randwalk.cpp" />
     <ClCompile Include="vect.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
