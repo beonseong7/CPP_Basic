@@ -23,5 +23,8 @@
     <ClCompile Include="stonewt.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="stone.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
