@@ -21,3 +21,19 @@ Stonewt::Stonewt()
 Stonewt::~Stonewt()
 {
 }
+void Stonewt::show_stn() const
+{
+	cout << stone << "스톤, " << pds_left << "파운드\n";
+}
+void Stonewt::show_lbs() const
+{
+	cout << pounds << "파운드\n";
+}
+Stonewt::operator int() const
+{
+	return int(pounds + 0.5); // 반올림으로 형변환
+}
+Stonewt::operator double() const
+{
+	return pounds;
+}
