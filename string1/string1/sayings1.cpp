@@ -2,6 +2,7 @@
 #include"string1.h"
 const int ArSize = 10;
 const int MaxLen = 81;
+/*
 int main()
 {
 	using std::cout;
@@ -51,3 +52,4 @@ int main()
 		cout << "입력금지! 이상,\n";
 	return 0;
 }
+*/
