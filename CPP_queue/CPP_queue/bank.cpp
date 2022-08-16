@@ -35,6 +35,7 @@ int main()
 	for (int cycle = 0; cycle < cyclelimit; cycle)
 	{
 		if (newcustomer(min_per_cust))
+		{
 			if (line.isfull())
 				turnaways++;
 			else
@@ -43,5 +44,37 @@ int main()
 				temp.set(cycle);
 				line.enqueue(temp);
 			}
+		}
+		if (wait_time <= 0 && !line.isempty())
+		{
+			line.dequeue(temp);
+			wait_time = temp.ptime();
+			line_wait += cycle - temp.when();
+			served++;
+		}
+		if (wait_time > 0)
+			wait_time--;
+		sum_line += line.queuecount();
 	}
+	if (customers > 0)
+	{
+		cout << " 큐에 줄을 선 고객 수: " << customers << endl;
+		cout << "거래를 처리한 고객 수: " << served << endl;
+		cout << " 밭길을 돌린 고객 수: " << turnaways << endl;
+		cout << "		평균 큐의 길이:  ";
+		cout.precision(2);
+		cout.setf(ios_base::fixed, ios_base::floatfield);
+		cout.setf(ios_base::showpoint);
+		cout << (double)sum_line / cyclelimit << endl;
+		cout << "		평균 대기 시간: "
+			<< (double)line_wait / served << "분\n";
+	}
+	else
+		cout << "고객이 한명도 없습니다!\n";
+	cout << "완료!\n";
+	return 0;
+}
+bool newcustomer(double x)
+{
+	return (std::rand() * x / RAND_MAX < 1);
 }
