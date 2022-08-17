@@ -4,7 +4,7 @@
 #include"queue.h"
 const int MIN_PER_HR = 60;
 bool newcustomer(double x);
-int main()
+int main()//FIFO구조인 큐구조를 클래스화하여 구현했다
 {
 	using std::cin;
 	using	std::cout;
@@ -32,7 +32,7 @@ int main()
 	long sum_line = 0;
 	long wait_time = 0;
 	long line_wait = 0;
-	for (int cycle = 0; cycle < cyclelimit; cycle)
+	for (int cycle = 0; cycle < cyclelimit; cycle++)
 	{
 		if (newcustomer(min_per_cust))
 		{

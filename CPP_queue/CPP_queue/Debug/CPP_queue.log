@@ -1,5 +1,3 @@
 ﻿  bank.cpp
 D:\bsroom\CPPpoject\CPP_queue\CPP_queue\bank.cpp(13,22): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  queue.cpp
-  코드를 생성하고 있습니다...
   CPP_queue.vcxproj -> D:\bsroom\CPPpoject\CPP_queue\Debug\CPP_queue.exe
