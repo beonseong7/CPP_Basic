@@ -1,5 +1,6 @@
 #include<iostream>
 #include"brass.h"
+/*
 int main()
 {
 	using std::cout;
@@ -23,3 +24,4 @@ int main()
 
 	return 0;
 }
+*/
