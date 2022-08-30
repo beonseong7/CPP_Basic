@@ -55,3 +55,46 @@ void Brass::ViewAcct() const
 	cout << "현재 잔액: $" << Balance() << endl;
 	Restore(f);
 }
+BrassPlus::BrassPlus(const string& s, long an, double bal, double ml, double r) : AcctABC(s, an, bal)
+{
+	maxLoan = ml;
+	owesBank = 0.0;
+	rate = r;
+}
+BrassPlus::BrassPlus(const Brass& ba, double ml, double r) : AcctABC(ba)
+{
+	maxLoan = ml;
+	owesBank = 0.0;
+	rate = r;
+}
+void BrassPlus::ViewAcct() const
+{
+	Formatting f = setFormat();
+	cout << "BrassPlus 고객: " << FullName() << endl;
+	cout << "계좌 번호: " <<AccNum() << endl;
+	cout << "현재 잔액: $" << Balance() << endl;
+	cout << "당좌 대월 한도: $" << maxLoan << endl;
+	cout << "상환할 원리금: $" << owesBank << endl;
+	cout.precision(3);
+	cout << "당좌 대월 이자율: " << 100 * rate << "%\n";
+	Restore(f);
+}
+void BrassPlus::Withdraw(double amt)
+{
+	Formatting f = setFormat();
+	double bal = Balance();
+	if (amt <= bal)
+		AcctABC::Withdraw(amt);
+	else if (amt <= bal + maxLoan - owesBank)
+	{
+		double advance = amt - bal;
+		owesBank += advance * (1.0 + rate);
+		cout << "당좌 대월 금액: $" << advance << endl;
+		cout << "당좌 대월 이자: $" << advance * rate << endl;
+		Deposit(advance);
+		AcctABC::Withdraw(amt);
+	}
+	else
+		cout << "당좌 대월 한도가 초과되어 거래가 취소되었습니다.\n";
+	Restore(f);
+}
