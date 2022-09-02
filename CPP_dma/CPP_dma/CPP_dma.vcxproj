@@ -141,6 +141,9 @@
   <ItemGroup>
     <ClInclude Include="dma.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dma.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

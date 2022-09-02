@@ -20,7 +20,7 @@ private:
 	enum{COL_LEN = 40};
 	char color[COL_LEN];
 public:
-	lacksDMA(const char * c ="blank",)
+	lacksDMA(const char* c = "blank");
 };
 class hasDMA : public baseDMA
 {
