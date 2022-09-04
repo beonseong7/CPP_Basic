@@ -61,3 +61,29 @@ hasDMA::hasDMA(const char* s, const baseDMA& rs)
 	style = new char[std::strlen(s) + 1];
 	std::strcpy(style, s);
 }
+hasDMA::hasDMA(const hasDMA& hs)
+	: baseDMA(hs)
+{
+	style = new char[std::strlen(hs.style) + 1];
+	std::strcpy(style, hs.style);
+}
+hasDMA::~hasDMA()
+{
+	delete[]style;
+}
+hasDMA& hasDMA::operator=(const hasDMA& hs)
+{
+	if (this == &hs)
+		return *this;
+	baseDMA::operator=(hs);
+	delete[] style;
+	style = new char[std::strlen(hs.style) + 1];
+	std::strcpy(style, hs.style);
+	return *this;
+}
+std::ostream& operator<<(std::ostream& os, const hasDMA& hs)
+{
+	os << (const baseDMA&)hs;
+	os << "½ºÅ¸ÀÏ: " << hs.style << std::endl;
+	return os;
+}
