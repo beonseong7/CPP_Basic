@@ -33,12 +33,14 @@ std::ostream& operator << (std::ostream& os, const baseDMA& rs)
 	os << "µî±Þ: " << rs.rating << std::endl;
 	return os;
 }
-lacksDMA::lacksDMA(const char* c, const char* l, int r):baseDMA(l,r)
+lacksDMA::lacksDMA(const char* c, const char* l, int r)
+	:baseDMA(l,r)
 {
 	std::strncpy(color, c, COL_LEN - 1);
 	color[39] = '\0';
 }
-lacksDMA::lacksDMA(const char* c, const baseDMA& rs) : baseDMA(rs)
+lacksDMA::lacksDMA(const char* c, const baseDMA& rs) 
+	: baseDMA(rs)
 {
 	std::strncpy(color, c, COL_LEN - 1);
 	color[COL_LEN - 1] = '\0';
