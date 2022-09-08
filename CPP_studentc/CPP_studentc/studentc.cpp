@@ -41,3 +41,19 @@ ostream& Student::arr_out(ostream& os) const
 		os << "빈 배열";
 	return os;
 }
+istream& getline(istream& is, Student& stu)
+{
+	getline(is, stu.name);
+	return is;
+}
+istream& getline(istream& is, Student& stu)
+{
+	getline(is, stu.name);
+	return is;
+}
+ostream& operator<<(ostream& os, const Student& stu)
+{
+	os << stu.name << " 학생의 성적표:\n";
+	stu.arr_out(os);
+	return os;
+}
