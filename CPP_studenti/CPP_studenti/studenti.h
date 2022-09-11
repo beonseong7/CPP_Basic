@@ -2,7 +2,7 @@
 #define STUDENTI_H_
 
 #include<iostream>
-#include<valarry>
+#include<valarray>
 #include<string>
 class Student : private std::string, private std::valarray<double>
 {
@@ -17,8 +17,8 @@ public:
 	Student(const std::string & s, int n)
 		: std::string(s), ArrayDb(n) {}
 	Student(const std::string & s, const ArrayDb & a)
-		: std::string(s), Array Db(a) {}
-	Student(const char & str, const double * pd, int n)
+		: std::string(s), ArrayDb(a) {}
+	Student(const char * str, const double * pd, int n)
 		:std::string(str), ArrayDb(pd, n) {}
 	~Student() {}
 	double Average() const;
