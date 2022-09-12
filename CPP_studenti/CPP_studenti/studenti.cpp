@@ -23,3 +23,39 @@ double Student::operator[](int i) const
 {
 	return ArrayDb::operator[](i);
 }
+ostream& Student::arr_out(ostream& os) const
+{
+	int i;
+	int lim = ArrayDb::size();
+	if (lim > 0)
+	{
+		for (i = 0; i < lim; i++)
+		{
+			os << ArrayDb::operator[](i) << " ";
+			if (i % 5 == 4)
+				os << endl;
+		}
+		if (i % 5 != 0)
+			os << endl;
+	}
+	else
+		os << "ºó ¹è¿­";
+	return os;
+		
+}
+istream& operator>>(istream& is, Student& stu)
+{
+	is >> (string&)stu;
+	return is;
+}
+istream& getline(istream& is, Student& stu)
+{
+	getline(is, (string&)stu);
+	return is;
+}
+ostream& operator<<(ostream& os, const Student& stu)
+{
+	os << "Scores for " << (const string&)stu << ":\n";
+	stu.arr_out(os);
+	return os;
+}
