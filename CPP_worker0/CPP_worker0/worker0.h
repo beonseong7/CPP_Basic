@@ -21,9 +21,26 @@ private:
 public:
 	Waiter() : Worker(), panache(0) {}
 	Waiter(const std::string & s,long n, int p = 0)
-		: Worker(s, n) panache(p) {}
+		: Worker(s, n), panache(p) {}
 	Waiter(const Worker& wk, int p = 0)
 		:Worker(wk), panache(p) {}
+	void Set();
+	void Show() const;
+};
+class Singer : public Worker
+{
+protected:
+	enum{other,alto,contralto,soprano,bass,baritone,tenor};
+	enum { types = 8 };
+private:
+	static char* pv[Vtypes];
+	int voice;
+public:
+	Singer() : Worker(), voice(other) {}
+	Singer(const std::string& s, long n, int v = other)
+		:Worker(s, n), voice(v) {}
+	Singer(const Worker& wk, int v = other)
+		:Worker(wk), voice(v) {}
 	void Set();
 	void Show() const;
 };
