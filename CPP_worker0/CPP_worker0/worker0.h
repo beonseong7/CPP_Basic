@@ -31,7 +31,7 @@ class Singer : public Worker
 {
 protected:
 	enum{other,alto,contralto,soprano,bass,baritone,tenor};
-	enum { types = 8 };
+	enum { Vtypes = 7 };
 private:
 	static char* pv[Vtypes];
 	int voice;

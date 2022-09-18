@@ -33,7 +33,7 @@ void Waiter::Show() const
 	Worker::Show();
 	cout << "웨이터 등급: " << panache << "\n";
 }
-char* Singer::pv[] = { "other", "alto", "contralto","soprano","bass","baritone","tenor" };
+char * Singer::pv[] = { "other", "alto", "contralto","soprano","bass","baritone","tenor" };
 void Singer::Set()
 {
 	Worker::Set();
