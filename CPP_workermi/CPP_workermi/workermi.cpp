@@ -42,3 +42,35 @@ void Waiter::Get()
 		continue;
 }
 char* Singer::pv[Singer::Vtypes] = { "other","alto","contralto","soprano","bass","baritone","tenor" };
+void Singer::Set()
+{
+	cout << "가수의 이름을 입력하십시오: ";
+	Worker::Get();
+	Get();
+}
+void Singer::Show() const
+{
+	cout << "직종: 가수\n";
+	Worker::Data();
+	Data();
+}
+void Singer::Data() const
+{
+	cout << "목소리 유형: " << pv[voice] << endl;
+}
+void Singer::Get()
+{
+	cout << "가수의 목소리 유형 번호를 입력하십시오:\n";
+	int i;
+	for (i = 0; i < Vtypes; i++)
+	{
+		cout << i << ": " << pv[i] << " ";
+		if (i % 4 == 3)
+			cout << endl;
+	}
+	if (i % 4 != 0)
+		cout << '\n';
+	cin >> voice;
+	while (cin.get() != '\n')
+		continue;
+}
