@@ -74,3 +74,25 @@ void Singer::Get()
 	while (cin.get() != '\n')
 		continue;
 }
+void SingingWaiter::Data() const
+{
+	Singer::Data();
+	Waiter::Data();
+}
+void SingingWaiter::Get()
+{
+	Waiter::Get();
+	Singer::Get();
+}
+void SingingWaiter::Set()
+{
+	cout << "가수 겸 웨이터의 이름을 입력하십시오: ";
+	Worker::Get();
+	Get();
+}
+void SingingWaiter::Show() const
+{
+	cout << "직종: 가수겸 웨이터\n";
+	Worker::Data();
+	Data();
+}
