@@ -30,6 +30,20 @@ int main()
 			if (st.isfull())
 				cout << "스택이 가득 차 있습니다.\n";
 			else
+				st.push(po);
+			break;
+		case 'P':
+		case 'p': if (st.isempty())
+			cout << "스택이 비어있습니다.\n";
+				else {
+			st.pop(po);
+			cout << "#" << po << " 주문서를 처리했습니다.\n";
+			break;
 		}
+		}
+		cout << "주문서를 추가하려면 A, 주문서를 처리하려면 P, \n"
+			<< "종료하려면 Q를 입력하십시오.\n";
 	}
+	cout << "프로그램을 종료합니다.\n";
+	return 0;
 }
