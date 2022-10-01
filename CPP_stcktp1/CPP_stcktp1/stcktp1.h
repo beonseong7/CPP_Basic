@@ -14,4 +14,40 @@ public:
 	~Stack(){ delete[] items; }
 	bool isempty() { return top == 0; }
 	bool isfull() { return top == stacksize; }
+	bool push(const Type& item);
+	bool pop(Type& item);
+	Stack& operator =(cont Stack& st);
 };
+template<class Type>
+Stack<Type>::Stack(int ss) : stacksize(ss), top(0)
+{
+	items = new Type[stacksize];
+}
+template <class Type>
+Stack<Type>::Stack(const Stack& st)
+{
+	stacksize = st.stacksize;
+	top = st.top;
+	items = new Type[stacksize];
+	for (int i = 0; i < top; i++)
+		items[i] = st.items[i];
+}
+template<class Type>
+bool Stack<Type>::push(const Type & item)
+{
+	if (top < stacksize)
+	{
+		items[top++] = item;
+		return true;
+	}
+	else
+		return false;
+}
+template<class Type>
+bool Stack<Type>::pop(Type& item)
+{
+	if (top > 0)
+	{
+		item = items[--top];
+	}
+}
