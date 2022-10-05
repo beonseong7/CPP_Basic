@@ -16,7 +16,7 @@ public:
 	bool isfull() { return top == stacksize; }
 	bool push(const Type& item);
 	bool pop(Type& item);
-	Stack& operator =(cont Stack& st);
+	Stack& operator =(const Stack & st);
 };
 template<class Type>
 Stack<Type>::Stack(int ss) : stacksize(ss), top(0)

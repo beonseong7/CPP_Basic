@@ -28,7 +28,7 @@ int main()
 		else if (st.isfull())
 			st.pop(out[processed++]);
 		else if (std::rand() % 2 && nextin < Num)
-			st.push(in[nextin++])
+			st.push(in[nextin++]);
 		else
 			st.pop(out[processed++]);
 	}
