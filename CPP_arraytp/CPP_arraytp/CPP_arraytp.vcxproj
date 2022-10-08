@@ -142,6 +142,7 @@
     <ClInclude Include="arraytp.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="pairs.cpp" />
     <ClCompile Include="twod.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
