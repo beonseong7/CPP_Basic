@@ -216,4 +216,5 @@
 -2022.10.14 static friend 예제 학습완료  
 -2022.10.15 static friend2 예제 학습완료  
 -2022.10.16 언바운드 템플릿 프렌드 함수 예제 학습완료  
--2022.10.17 friend class 예제 학습  
+-2022.10.17 friend class 예제 학습중  
+-2022.10.18 friend class 예제 학습중  
