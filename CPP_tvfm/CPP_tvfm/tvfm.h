@@ -1,6 +1,6 @@
 #ifndef TVFM_H_
 #define TVFM_H_
-class Tv;
+class Tv;//CPP_tv의 tv.h 수정본
 class Remote
 {
 public:
@@ -51,4 +51,12 @@ private:
 	int mode;
 	int input;
 };
+inline bool Remote::volup(Tv& t) { return t.volup(); }
+inline bool Remote::voldown(Tv& t) { return t.voldown(); }
+inline void Remote::onoff(Tv& t) { t.onoff(); }
+inline void Remote::chanup(Tv& t) { t.chanup(); }
+inline void Remote::chandown(Tv& t) { t.chandown(); }
+inline void Remote::set_mode(Tv& t) { t.set_mode(); }
+inline void Remote::set_input(Tv& t) { t.set_input(); }
+inline void Remote::set_chan(Tv& t,int c) { t.channel = c; }
 #endif
