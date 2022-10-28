@@ -226,3 +226,4 @@
 -2022.10.24 Queue Template 예제 학습중  
 -2022.10.25 Queue Template 예제 학습중  
 -2022.10.26 Queue Template 예제 학습완료  
+-2022.10.27 예외 처리 예제 학습중  
