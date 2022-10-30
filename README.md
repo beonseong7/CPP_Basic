@@ -221,10 +221,11 @@
 -2022.10.19 friend class 예제 학습중  
 -2022.10.20 friend class 예제 학습완료  
 -2022.10.21 friend member function 예제 학습중  
--2022.10.22 friend member function 예제 학습완료
+-2022.10.22 friend member function 예제 학습완료  
 -2022.10.23 Queue Template 예제 학습중  
 -2022.10.24 Queue Template 예제 학습중  
 -2022.10.25 Queue Template 예제 학습중  
 -2022.10.26 Queue Template 예제 학습완료  
 -2022.10.27 예외 처리 예제 학습완료  
 -2022.10.28 에러코드 리턴 예제 학습완료  
+-2022.10.29 에러메커니즘 예제 학습완료  
