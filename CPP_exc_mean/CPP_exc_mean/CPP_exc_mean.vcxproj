@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="error4.cpp" />
+    <ClCompile Include="error5.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
