@@ -24,3 +24,43 @@ public:
 double hmean(double a, double b) throw(bad_hmean);
 double gmean(double a, double b) throw(bad_geman);
 double means(double a, double b) throw(bad_hmean, bad_geman);
+
+int main()
+{
+	using std::cout;
+	using std::cin;
+	using std::endl;
+	double x, y, z;
+	{
+		demo d1("found in block in  main()");
+		cout << "두수를 입력하십시오: ";
+		while (cin >> x >> y)
+		{
+			try {
+				z = means(x, y);
+				cout << x << "와 " << y
+					<< "의 평균 의 평균은 " << z << endl;
+				cout << "다음 두수를 입력하십시오: ";
+			}
+			catch (bad_hmean& bg)
+			{
+				bg.mesg();
+				cout << "다시 하십시오.\n";
+				continue;
+			}
+			catch (bad_geman& hg)
+			{
+				cout << hg.mesg();
+				cout << "사용된 두값: " << hg.v1 << ","
+					<< hg.v2 << endl;
+				cout << "죄송합니다. 더이상 진행할 수 없습니다.\n";
+				break;
+			}
+		}
+		d1.show();
+	}
+	cout << "프로그램을 종료합니다.\n";
+	cin.get();
+	cin.get();
+	return 0;
+}
