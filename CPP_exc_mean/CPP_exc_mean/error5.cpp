@@ -64,3 +64,34 @@ int main()
 	cin.get();
 	return 0;
 }
+double hmean(double a, double b)
+{
+	if (a == -b)
+		throw bad_hmean(a, b);
+	return 2.0 * a * b / (a + b);
+}
+double gmean(double a, double b)
+{
+	if (a < 0 || b < 0)
+		throw bad_geman(a, b);
+	return std::sqrt(a * b);
+}
+double means(double a, double b)
+{
+	double am, hm, gm;
+	demo d2("found in means()");
+	am = (a + b) / 2.0;
+	try
+	{
+		hm = hmean(a, b);
+		gm = gmean(a, b);
+	}
+	catch (bad_hmean& bg)
+	{
+		bg.mesg();
+		std::cout << "means()¿¡¼­ ÀâÈû\n";
+		throw;
+	}
+	d2.show();
+	return (am + hm + gm) / 3.0;
+}
