@@ -33,3 +33,21 @@ double& Sales::operator[](int i)
 		throw bad_index(i);
 	return gross[i];
 }
+LabeledSales::nbad_index::nbad_index(const string& lb, int ix, const string & s) :Sales::bad_index(ix, s)
+{
+	lbl = lb;
+}
+LabeledSales::LabeledSales(const string& lb, int yy) : Sales(yy)
+{
+	label = lb;
+}
+LabeledSales::LabeledSales(const string& lb, int yy, const double* gr, int n) : Sales(yy, gr, n)
+{
+	label = lb;
+}
+double LabeledSales::operator[](int i) const
+{
+	if (i < 0 || i >= MONTHS)
+		throw nbad_index(Label(), i);
+	return Sales::operator[](i);
+}
