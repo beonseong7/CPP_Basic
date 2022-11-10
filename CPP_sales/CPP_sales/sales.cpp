@@ -51,3 +51,9 @@ double LabeledSales::operator[](int i) const
 		throw nbad_index(Label(), i);
 	return Sales::operator[](i);
 }
+double &LabeledSales::operator[](int i)
+{
+	if (i < 0 || i >= MONTHS)
+		throw nbad_index(Label(), i);
+	return Sales::operator[](i);
+}
