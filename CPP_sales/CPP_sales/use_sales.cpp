@@ -30,5 +30,44 @@ int main()
 			if (i % 6 == 5)
 				cout << endl;
 		}
+		cout << "Year = " << sales2.Year() << endl;
+		cout << "Label = " << sales2.Label() << endl;
+		for (i = 0; i <= 12; ++i)
+		{
+			cout << sales2[i] << ' ';
+			if (i % 6 == 5)
+				cout << endl;
+		}
+		cout << "try 블록 1의 끝.\n";
 	}
+	catch (LabeledSales::nbad_index& bad)
+	{
+		cout << bad.what();
+		cout << "잘못된 인덱스: " << bad.bi_val() << endl;
+	}
+	catch (Sales::bad_index& bad)
+	{
+		cout << bad.what();
+		cout << "잘못된 인덱스: " << bad.bi_val() << endl;
+	}
+	cout << "\n다음 try 블록:\n";
+	try
+	{
+		sales2[2] = 37.5;
+		sales1[20] = 23345;
+		cout << "try 블록 2의 끝.\n";
+	}
+	catch (LabeledSales::nbad_index& bad)
+	{
+		cout << bad.what();
+		cout << "Company: " << bad.label_val() << endl;
+		cout << "잘못된 인덱스: " << bad.bi_val() << endl;
+	}
+	catch (Sales::bad_index& bad)
+	{
+		cout << bad.what();
+		cout << "잘못된 인덱스: " << bad.bi_val() << endl;
+	}
+	cout << "프로그램을 종료합니다,\n";
+	return 0;
 }
