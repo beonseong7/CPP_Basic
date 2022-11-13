@@ -27,3 +27,32 @@ public:
 	void Speak() const { cout << "나는 Magnificent 클래스이다!!\n"; }
 	void Say() const { cout << "내가 가지고 있는 문자는 " << ch << "이고, 정수는" << Value() << "이다\n"; }
 };
+Grand* GetOne();
+int main()
+{
+	std::srand(std::time(0));
+	Grand* pg;
+	Superb* ps;
+	for (int i = 0; i < 5; i++)
+	{
+		pg = GetOne();
+		pg->Speak();
+		if (ps = dynamic_cast<Superb*>(pg))
+			ps->Say();
+	}
+	return 0;
+}
+Grand* GetOne()
+{
+	Grand* p;
+	switch (std::rand() % 3)
+	{
+	case 0:p = new Grand(std::rand() % 100);
+		break;
+	case 1:p = new Superb(std::rand() % 100);
+			break;
+	case 2:p = new Magnificent(std::rand() % 100, 'A' + std::rand() % 26);
+		break;
+	}
+	return p;
+}
