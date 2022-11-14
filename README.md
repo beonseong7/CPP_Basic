@@ -244,3 +244,4 @@
 -2022.11.11 예외와 클래스 상속 상호작용 예제 학습완료  
 -2022.11.12 RTTI dynamic class 예제 학습중  
 -2022.11.13 RTTI dynamic class 예제 학습중  
+-2022.11.14 RTTI dynamic class 예제 학습중  
