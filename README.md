@@ -245,3 +245,4 @@
 -2022.11.12 RTTI dynamic class 예제 학습중  
 -2022.11.13 RTTI dynamic class 예제 학습중  
 -2022.11.14 RTTI dynamic class 예제 학습중  
+-2022.11.15 RTTI dynamic class 예제 학습완료  
