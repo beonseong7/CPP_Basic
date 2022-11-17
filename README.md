@@ -246,3 +246,4 @@
 -2022.11.13 RTTI dynamic class 예제 학습중  
 -2022.11.14 RTTI dynamic class 예제 학습중  
 -2022.11.15 RTTI dynamic class 예제 학습완료  
+-2022.11.16 데이터형 변환 연산자 예제 학습완료  
