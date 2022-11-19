@@ -21,5 +21,8 @@
     <ClCompile Include="strfile.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="hangman.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

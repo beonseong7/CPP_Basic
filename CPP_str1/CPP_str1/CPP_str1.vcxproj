@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="hangman.cpp" />
     <ClCompile Include="str1.cpp" />
     <ClCompile Include="strfile.cpp" />
   </ItemGroup>
