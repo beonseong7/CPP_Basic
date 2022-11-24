@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="fowl.cpp" />
     <ClCompile Include="smrtptrs.cpp" />
     <ClCompile Include="str2.cpp" />
   </ItemGroup>
