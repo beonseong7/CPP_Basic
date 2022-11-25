@@ -142,6 +142,7 @@
     <ClCompile Include="fowl.cpp" />
     <ClCompile Include="smrtptrs.cpp" />
     <ClCompile Include="str2.cpp" />
+    <ClCompile Include="vect1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
