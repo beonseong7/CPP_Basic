@@ -30,5 +30,41 @@ int main()
 		for (pr = books.begin(); pr != books.end(); pr++)
 			ShowReview(*pr);
 		vector<Review> oldlist(books);
+		if (num > 3)
+		{
+			books.erase(books.begin() + 1, books.begin() + 3);
+			cout << "삭제한 후:\n";
+			for (pr = books.begin(); pr != books.end(); pr++)
+				ShowReview(*pr);
+			books.insert(books.begin(), oldlist.begin() + 1, oldlist.begin() + 2);
+			cout << "삽입한 후:\n";
+			for (pr = books.begin(); pr != books.end(); pr++)
+				ShowReview(*pr);
+		}
+		books.swap(oldlist);
+		cout << "oldlist와 books를 교환한 후 : \n";
+		for (pr = books.begin(); pr != books.end(); pr++)
+			ShowReview(*pr);
 	}
+	else
+		cout << "입력한 것이 없어, 얻은 것이 없습니다.\n";
+	return 0;
+}
+bool FillReview(Review& rr)
+{
+	std::cout << "책 제목을 입력하십시오(끝내려면 quit를 입력):";
+	std::getline(std::cin, rr.titel);
+	if (rr.titel == "quit")
+		return false;
+	std::cout << "책 등급(0-10)을 입력하십시오:";
+	std::cin >> rr.rating;
+	if (!std::cin)
+		return false;
+	while (std::cin.get() != '\n')
+		continue;
+	return true;
+}
+void ShowReview(const Review& rr)
+{
+	std::cout << rr.rating << "\t" << rr.titel << std::endl;
 }
