@@ -144,6 +144,7 @@
     <ClCompile Include="str2.cpp" />
     <ClCompile Include="vect1.cpp" />
     <ClCompile Include="vect2.cpp" />
+    <ClCompile Include="vect3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
