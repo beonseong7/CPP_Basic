@@ -55,3 +55,21 @@ bool worsethan(const Review& r1, const Review& r2)
 	else
 		return false;
 }
+bool FillReview(Review& rr)
+{
+	std::cout << "책 제목을 입력하십시오(끝내려면quit): ";
+	std::getline(std::cin, rr.title);
+	if (rr.title == "quit")
+		return false;
+	std::cout << "책 등급(0-10)을 입력하십시오: ";
+	std::cin >> rr.rating;
+	if (!std::cin)
+		return false;
+	while (std::cin.get() != '\n')
+		continue;
+	return true;
+}
+void ShowReveiw(const Review& rr)
+{
+	std::cout << rr.rating << "\t" << rr.title << std::endl;
+}
