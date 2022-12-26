@@ -19,4 +19,29 @@ int main()
 	cout << "집합 B: ";
 	copy(B.begin(), B.end(), out);
 	cout << endl;
+	cout << "A와 B의 합집합:\n";
+	set_union(A.begin(), A.end(), B.begin(), B.end(), out);
+	cout << endl;
+	cout << "A와B의 교집합:\n";
+	set_intersection(A.begin(), A.end(), B.begin(), B.end(), out);
+	cout << endl;
+	cout << "A와B의 차집합:\n";
+	set_difference(A.begin(), A.end(), B.begin(), B.end(), out);
+	cout << endl;
+	set<string> C;
+	cout << "집합 C:\n";
+	set_union(A.begin(), A.end(), B.begin(), B.end(), insert_iterator<set<string>>(C, C.begin()));
+	copy(C.begin(), C.end(), out);
+	cout << endl;
+	string s3("grungy");
+	C.insert(s3);
+	cout << "삽입한 후의 집합 C:\n";
+	copy(C.begin(), C.end(), out);
+	cout << endl;
+
+	cout << "특정한 범위를 표시:\n";
+	copy(C.lower_bound("ghost"), C.upper_bound("spook"), out);
+	cout << endl;
+	return 0;
+
 }
